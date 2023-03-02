@@ -1,0 +1,127 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+body{
+    width: 100%;
+    height: 100%; 
+    background-image: url(https://media.istockphoto.com/id/1301369235/vector/blue-luminous-lines-and-highlights-on-black-carbon-fiber-techno-background-dark-carbon-fiber.jpg?s=612x612&w=0&k=20&c=wGSrjX-KCENzXuhH4wsfhi9qn_l9R8xTccl1kmWIK2M=);
+    background-size: cover;
+    background-position: center;
+    padding: 0 8%;
+    position: relative;
+}    
+nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 0px;
+}
+ nav ul{
+    flex: 1;
+    text-align: right;
+    padding-right: 0px;
+ }
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+.text-box{
+    color: white;
+    position: absolute;
+    top: 700%;
+    left: 10%;
+}
+ .text-box p{
+    font-size: 50px;
+    font-weight: 600;
+}
+.text-box h1{
+    font-size: 190px;
+    line-height: 160px;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    
+}
+.text-box h3{
+    font-size: 40px;
+    font-weight: 500px;
+}  
+.text-box .row{
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.text-box a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: 2px solid white;
+    ;
+}
+
+.social-icons{
+    position: absolute;
+    right: 5%;
+    bottom: -1350%;
+}
+
+.social-icons img{
+    width: 25px;
+    display: block;
+    margin: 25px 5px;
+}
+
+/* ABOUT ME PAGE */
+
+h5{
+    position: relative;
+    font-size: 3vw;
+    -webkit-text-stroke: 0.1vw whitesmoke;
+}
+.riya-img img{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    left: 525px;
+    top: 60px;
+}
+
+/* b{
+    width: 0ch;
+    align-items: center;
+    justify-content:center;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: text 6s;
+}
+@keyframes text{
+    0%{
+        width: 0ch;
+    }
+    50%{
+        width: 10ch;
+    }
+} */
+
+/* columna{
+    float: left;
+    width: 100%;
+    height: 500px;
+    background-color: white;
+} */
