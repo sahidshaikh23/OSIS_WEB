@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;1,100&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="s.css">
+   <script src="s.js"></script>
+    <title>To Do List</title>
+</head>
+<body>
+    <section>
+        <h1>To Do List</h1>
+        <div class="wrapper">
+            <div class="input-container">
+                <input type="text" name="todo" class="todo-input" id="todo-input" placeholder="Enter a task">
+                <button class="add-button" id="add-button">
+                    <i class="fa-solid fa-circle-plus" ></i>
+                </button>
+            </div>
+            <ul class="todo-container" id="todo-container"></ul>
+        </div>
+    </section>
+
+    <script>
+        addButton = document.getElementById("add-button")
+        todoContainer = document.getElementById("todo-container")
+        todoInput = document.getElementById("todo-input")
+
+        addButton.addEventListener("click" , (e) =>{
+            
+            let todo = document.createElement("div");
+            todo.classList.add("todo");
+
+            let li = document.createElement("li");
+            li.innerHTML = `${todoInput.value} `;
+            todo.appendChild(li);
+
+            let checkButton = document.createElement("button");
+            checkButton.innerHTML = `<i class="fa-solid fa-check" ></i>`;
+            checkButton.classList.add("todo-check");
+            todo.appendChild(checkButton);
+
+            let deleteButton = document.createElement("button");
+            deleteButton.innerHTML = `<i class="fa-solid fa-circle" ></i>`;
+            deleteButton.classList.add("todo-delete");
+            todo.appendChild(deleteButton);
+
+            if(todoInput.value === ""){
+                alert("Enter a task");
+            }
+            else{
+                todoContainer.appendChild(todo);
+            }
+            todoInput.value = "";
+
+        });
+
+        todoContainer.addEventListener("click" , (e)=>{
+            let target = e.target;
+            if(target.classList.contains("todo-delete")){
+            let item = target.parentElement;
+            item.remove();
+            
+        }
+
+        if(target.classList.contains("todo-check")){
+            let item = target.parentElement;
+            item.classList.toggle("completed");
+            
+        }
+
+        });
+    </script>
+</body>
+</html>
+<!-- `` -->
